@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ABDO HAMOUDA IMAGES</title>
+<h1> ABDO HAMOUDA </h1><BR><BR>
+
+</head>
+<body>
+
+<fieldset>
+  <label style="--_img: url(https://i.pinimg.com/474x/9c/83/37/9c83379e61743c80e66d53e9267ad397.jpg)">
+    <input type="radio" name="images" value="Fiddle Leaf">
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/42/7d/f4/427df476a38e2ef937f9e4e5dfaf47ea.jpg)">
+    <input type="radio" name="images" value="Pink Princess">
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/55/cb/1b/55cb1b0365ad8514ecab96f3e23835f9.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/98/6c/81/986c810153214fcc52f11e0570157575.jpg)">
+    <input type="radio" name="images" value="Pothos">
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/d4/99/2a/d4992af06e9d5996ab2e87270c181160.jpg)">
+    <input type="radio" name="images" value="Rubber Tree">
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/5a/f9/17/5af917bdb96f479ffc11db86a109ead4.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/c8/70/aa/c870aa528d6d94ef3d0eabd12b7d4fd6.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/ab/0a/2e/ab0a2e38edcae23641c0e14f0e101244.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/82/17/52/8217520d217d41e75a715bf4777a96af.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/474x/f9/1e/96/f91e966f9762182d8c05e6f19aacdb7a.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+</fieldset>
+
+</body>
+
+<style>
+
+    
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer demo {
+  fieldset {
+    grid-template-columns:
+      var(--col-1, 1fr)
+      var(--col-2, 1fr)
+      var(--col-3, 1fr)
+      var(--col-4, 1fr)
+      var(--col-5, 1fr)
+      var(--col-6, 1fr)
+      var(--col-7, 1fr)
+      var(--col-8, 1fr)
+      var(--col-9, 1fr)
+      var(--col-10, 1fr);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: grid-template-columns 2s var(--ease-spring-5);
+    }
+
+    &:has(label:nth-child(1) > input:checked) {
+      --col-1: 5fr;
+      --col-2: 3fr;
+    }
+    &:has(label:nth-child(2) > input:checked) {
+      --col-1: 2fr;
+      --col-2: 5fr;
+      --col-3: 2fr;
+    }
+    &:has(label:nth-child(3) > input:checked) {
+      --col-2: 2fr;
+      --col-3: 5fr;
+      --col-4: 2fr;
+    }
+    &:has(label:nth-child(4) > input:checked) {
+      --col-3: 2fr;
+      --col-4: 5fr;
+      --col-5: 2fr;
+    }
+    &:has(label:nth-child(5) > input:checked) {
+      --col-5: 4fr;
+      --col-6: 5fr;
+    }
+    &:has(label:nth-child(6) > input:checked) {
+      --col-5: 2fr;
+      --col-6: 5fr;
+      --col-7: 2fr;
+    }
+    &:has(label:nth-child(7) > input:checked) {
+      --col-6: 2fr;
+      --col-7: 5fr;
+      --col-8: 2fr;
+    }
+    &:has(label:nth-child(8) > input:checked) {
+      --col-7: 2fr;
+      --col-8: 5fr;
+      --col-9: 2fr;
+    }
+    &:has(label:nth-child(9) > input:checked) {
+      --col-8: 2fr;
+      --col-9: 5fr;
+      --col-10: 2fr;
+    }
+    &:has(label:nth-child(10) > input:checked) {
+      --col-9: 2fr;
+      --col-10: 5fr;
+    }
+
+
+    > label {
+      background-image: var(--_img);
+      background-position: center;
+      background-size: auto 100%;
+    }
+  }
+}
+
+@layer demo.support {
+  html {
+    background: #000000;
+    block-size: 100%;
+  }
+
+  body {
+    min-block-size:100%;
+    display: grid;
+    place-content: center;
+    padding: var(--size-10);
+    gap: var(--size-);
+  }
+
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 80px;
+    background: linear-gradient(45deg, #ff0000, #1340e3, #ffcc00);
+    -webkit-background-clip : TEXT;
+    background-clip: text; 
+    color: transparent;
+}
+
+
+
+
+  fieldset {
+    inline-size: 85vw;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows:70vh;
+    gap: var(--size-3);
+    border: none;
+
+    > label {
+      cursor: pointer;
+      border-radius: var(--radius-4);
+
+      &:focus-within {
+        outline: 1px solid #ffffff;
+        outline-offset: 5px;
+      }
+
+      > input {
+        opacity: 0;
+      }
+    }
+  }
+}
+</style>
+
+</html>
